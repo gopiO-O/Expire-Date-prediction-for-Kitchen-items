@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Expiry Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Product Expiry Calculator</h2>
+        <form method="post" action="{{ url_for('calculate') }}">
+            <div class="form-group">
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required>
+            </div>
+            <div class="form-group">
+                <label for="purchase_date">Purchase Date (DD-MM-YYYY):</label>
+                <input type="text" id="purchase_date" name="purchase_date" required>
+            </div>
+            <button type="submit">Calculate Expiry Date</button>
+        </form>
+    </div>
+</body>
+</html>
